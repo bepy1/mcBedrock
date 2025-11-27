@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "mytsStarter",
+    "description": "TypeScript Starter",
+    "uuid": "ffdbfad2-9d79-4986-b5bb-6b8e0e0cbd05",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 120]
+  },
+  "modules": [
+    {
+      "description": "My Resource Pack",
+      "type": "resources",
+      "uuid": "b5d4deac-fbc9-4c8b-865c-0514f2b40f99",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "8d6af65d-a8f7-4059-aeff-e10d15181a29",
+      "version": [1, 0, 0]
+    }
+  ],
+  "metadata": {
+    "generated_with": {
+      "mctoolsweb": ["0.14.4"]
+    }
+  }
+}

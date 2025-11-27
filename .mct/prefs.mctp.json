@@ -1,0 +1,206 @@
+{
+  "dataType": 1,
+  "variants": {},
+  "storageBasePath": "",
+  "contentsModified": "2025-11-16T19:36:39.427Z",
+  "dataStorageRelativePath": "/mytsStarter/",
+  "editPreference": 0,
+  "name": "mytsStarter",
+  "title": "mytsStarter",
+  "description": "TypeScript Starter",
+  "defaultBehaviorPackUniqueId": "8d6af65d-a8f7-4059-aeff-e10d15181a29",
+  "defaultResourcePackUniqueId": "ffdbfad2-9d79-4986-b5bb-6b8e0e0cbd05",
+  "defaultScriptModuleUniqueId": "442ec955-8213-4701-93df-608467b4921c",
+  "defaultDataUniqueId": "8fe4f899-3027-4f1d-97e2-8a77c1d0d39a",
+  "focus": 0,
+  "items": [
+    {
+      "itemType": 59,
+      "variants": {},
+      "projectPath": "/package.json",
+      "storageType": 0,
+      "creationType": 1,
+      "tags": [],
+      "name": "package.json",
+      "isInWorld": false
+    },
+    {
+      "itemType": 58,
+      "variants": {},
+      "projectPath": "/tsconfig.json",
+      "storageType": 0,
+      "creationType": 0,
+      "tags": [],
+      "name": "tsconfig.json",
+      "isInWorld": false
+    },
+    {
+      "itemType": 109,
+      "variants": {},
+      "projectPath": "/behavior_packs/bepy_myts/",
+      "storageType": 1,
+      "creationType": 0,
+      "tags": [],
+      "name": "starter",
+      "isInWorld": false
+    },
+    {
+      "itemType": 5,
+      "variants": {},
+      "projectPath": "/behavior_packs/bepy_myts/manifest.json",
+      "storageType": 0,
+      "creationType": 0,
+      "tags": [
+        "behaviorpackmanifest"
+      ],
+      "name": "manifest.json",
+      "isInWorld": false
+    },
+    {
+      "itemType": 103,
+      "variants": {},
+      "projectPath": "/behavior_packs/bepy_myts/pack_icon.png",
+      "storageType": 0,
+      "creationType": 0,
+      "tags": [],
+      "name": "pack_icon.png",
+      "isInWorld": false
+    },
+    {
+      "itemType": 110,
+      "variants": {},
+      "projectPath": "/resource_packs/bepy_myts/",
+      "storageType": 1,
+      "creationType": 0,
+      "tags": [],
+      "name": "starter",
+      "isInWorld": false
+    },
+    {
+      "itemType": 14,
+      "variants": {},
+      "projectPath": "/resource_packs/bepy_myts/manifest.json",
+      "storageType": 0,
+      "creationType": 0,
+      "tags": [
+        "resourcepackmanifest"
+      ],
+      "name": "manifest.json",
+      "isInWorld": false
+    },
+    {
+      "itemType": 103,
+      "variants": {},
+      "projectPath": "/resource_packs/bepy_myts/pack_icon.png",
+      "storageType": 0,
+      "creationType": 0,
+      "tags": [],
+      "name": "pack_icon.png",
+      "isInWorld": false
+    },
+    {
+      "itemType": 13,
+      "variants": {},
+      "projectPath": "/scripts/main.ts",
+      "storageType": 0,
+      "creationType": 0,
+      "tags": [],
+      "name": "main.ts",
+      "isInWorld": false
+    },
+    {
+      "itemType": 121,
+      "variants": {},
+      "projectPath": "/.env",
+      "storageType": 0,
+      "creationType": 1,
+      "tags": [],
+      "name": ".env"
+    },
+    {
+      "itemType": 122,
+      "variants": {},
+      "projectPath": "/.prettierrc.json",
+      "storageType": 0,
+      "creationType": 1,
+      "tags": [],
+      "name": ".prettierrc.json"
+    },
+    {
+      "itemType": 119,
+      "variants": {},
+      "projectPath": "/just.config.ts",
+      "storageType": 0,
+      "creationType": 1,
+      "tags": [],
+      "name": "just.config.ts"
+    },
+    {
+      "itemType": 120,
+      "variants": {},
+      "projectPath": "/eslint.config.mjs",
+      "storageType": 0,
+      "creationType": 1,
+      "tags": [],
+      "name": "eslint.config.mjs"
+    },
+    {
+      "itemType": 75,
+      "variants": {},
+      "projectPath": "/.vscode/launch.json",
+      "storageType": 0,
+      "creationType": 1,
+      "tags": [],
+      "name": "launch.json"
+    },
+    {
+      "itemType": 77,
+      "variants": {},
+      "projectPath": "/.vscode/settings.json",
+      "storageType": 0,
+      "creationType": 1,
+      "tags": [],
+      "name": "settings.json"
+    },
+    {
+      "itemType": 76,
+      "variants": {},
+      "projectPath": "/.vscode/tasks.json",
+      "storageType": 0,
+      "creationType": 1,
+      "tags": [],
+      "name": "tasks.json"
+    },
+    {
+      "itemType": 78,
+      "variants": {},
+      "projectPath": "/.vscode/extensions.json",
+      "storageType": 0,
+      "creationType": 1,
+      "tags": [],
+      "name": "extensions.json"
+    }
+  ],
+  "projectFolderTitle": "bedrockAddons",
+  "originalGitHubOwner": "microsoft",
+  "originalGitHubRepoName": "minecraft-scripting-samples",
+  "originalGitHubFolder": "/ts-starter",
+  "originalGalleryId": "tsStarter",
+  "creator": "bepy",
+  "shortName": "bepy_myts",
+  "defaultBehaviorPackVersion": [
+    1,
+    0,
+    0
+  ],
+  "versionMajor": 1,
+  "versionMinor": 0,
+  "versionPatch": 0,
+  "defaultResourcePackVersion": [
+    1,
+    0,
+    0
+  ],
+  "collapsedStoragePaths": [],
+  "gitHubReferences": []
+}
