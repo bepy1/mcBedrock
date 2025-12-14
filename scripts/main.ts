@@ -1,58 +1,57 @@
-import { world, Player, ItemStack, ItemTypes, EntityInventoryComponent, EnchantmentTypes } from "@minecraft/server";
+import {
+  world,
+  system,
+  Entity,
+  Player,
+  ItemStack,
+  ItemTypes,
+  EntityInventoryComponent,
+  EnchantmentTypes,
+  Vector3,
+  VectorXZ,
+  BlockTypes,
+} from "@minecraft/server";
 
-world.afterEvents.playerSpawn.subscribe((event) => {
-  const player: Player = event.player;
-  const inventory = player.getComponent("inventory") as EntityInventoryComponent;
-  let woolColorPicker = Math.floor(Math.random() * 16);
-  const woolColors = [
-    "white_wool",
-    "orange_wool",
-    "magenta_wool",
-    "light_blue_wool",
-    "yellow_wool",
-    "lime_wool",
-    "pink_wool",
-    "gray_wool",
-    "light_gray_wool",
-    "cyan_wool",
-    "purple_wool",
-    "blue_wool",
-    "brown_wool",
-    "green_wool",
-    "red_wool",
-    "black_wool",
-  ];
+function getPlayerForwardDirection(player: Player) {
+  const rotation = player.getRotation();
+  const yaw = rotation.y * (Math.PI / 180);
+  const pitch = rotation.x * (Math.PI / 180);
 
-  if (!inventory || !inventory.container) {
-    player.sendMessage("§cno work :<");
-    return;
+  const x = -Math.sin(yaw) * Math.cos(pitch);
+  const z = Math.cos(yaw) * Math.cos(pitch);
+
+  return { x, z };
+}
+
+system.runInterval(() => {
+  for (const player of world.getPlayers()) {
+    const location = player.location;
+    const direction = getPlayerForwardDirection(player);
+    const blockBelow = player.dimension.getBlock({
+      x: location.x,
+      y: location.y + 0.9325,
+      z: location.z,
+    });
+
+    if (blockBelow && blockBelow.typeId === "minecraft:red_carpet") {
+      player.applyKnockback({ x: direction.x * 7, z: direction.z * 7 }, 1.25);
+    }
+    if (blockBelow && blockBelow.typeId === "minecraft:lime_carpet") {
+      player.applyKnockback({ x: 0, z: 0 }, 3);
+    }
   }
-
-  const tool = new ItemStack(ItemTypes.get("minecraft:shears")!, 1);
-  const toolEnchantable = tool.getComponent("enchantable");
-  if (toolEnchantable) {
-    toolEnchantable.addEnchantment({ type: EnchantmentTypes.get("unbreaking")!, level: 3 });
-    toolEnchantable.addEnchantment({ type: EnchantmentTypes.get("efficiency")!, level: 5 });
-  }
-  inventory.container.setItem(0, tool);
-
-  const bow = new ItemStack(ItemTypes.get("minecraft:bow")!, 1);
-  const bowEnchantable = bow.getComponent("enchantable");
-  if (bowEnchantable) {
-    bowEnchantable.addEnchantment({ type: EnchantmentTypes.get("unbreaking")!, level: 3 });
-    bowEnchantable.addEnchantment({ type: EnchantmentTypes.get("punch")!, level: 2 });
-    bowEnchantable.addEnchantment({ type: EnchantmentTypes.get("infinity")!, level: 1 });
-  }
-  inventory.container.setItem(1, bow);
-
-  const woolBlocks = new ItemStack(ItemTypes.get(`minecraft:${woolColors[woolColorPicker]}`)!, 64);
-  inventory.container.setItem(2, woolBlocks);
-
-  const food = new ItemStack(ItemTypes.get("minecraft:golden_carrot")!, 64);
-  inventory.container.setItem(8, food);
-
-  const arrow = new ItemStack(ItemTypes.get("minecraft:arrow")!, 1);
-  inventory.container.setItem(17, arrow);
-
-  player.sendMessage("§atake wool :O");
 });
+
+/*
+function knockbackEveryFiveSeconds() {
+  const players = world.getPlayers();
+  for (const player of players) {
+    if (system.currentTick % 100 === 0) {
+      player.applyKnockback({ x: 0, z: 0 }, 0.5);
+    }
+  }
+  system.run(knockbackEveryFiveSeconds);
+}
+
+system.run(knockbackEveryFiveSeconds);
+*/
